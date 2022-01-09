@@ -1,6 +1,8 @@
 #! /bin/bash
 
 echo
+echo " - - - - - - - - - - - - - - - "
+echo
 read -p "Hi! My name is B-A-S-H and I was created by Elena Weber. What is your name? " usersname
 if [ -n "$usersname" ]; then
     if [[ "$usersname" =~ ^[0-9]+$ ]]; then
@@ -55,7 +57,7 @@ else
 fi
 
 echo
-read -p "Are you enjoying it? (type y/N) " jobenjoying
+read -p "Are you enjoying it? (y/N) " jobenjoying
 if [ "$jobenjoying" == "" ]; then
     echo "I'm afraid I didn't get it but it's ok, no problem."
 elif [ $jobenjoying == "n" -o $jobenjoying == "N" ]; then
@@ -67,7 +69,7 @@ else
 fi
 
 echo
-read -p "Do you happen to know what date and time it is? (type Y/n) " datetime
+read -p "Do you happen to know what date and time it is? (Y/n) " datetime
 case $datetime in
     "")
         echo "No problem."
@@ -89,7 +91,8 @@ echo
 
 cal
 
-read -p "Are you free some time next week? (type Y/n) " nextweek
+echo
+read -p "Are you free some time next week? (Y/n) " nextweek
 echo
 case $nextweek in
     "y" | "Y")
@@ -118,5 +121,7 @@ esac
 echo
 echo "I'd better be going. It's been great talking with you. Bye-bye! :)"
 echo
+echo " - - - - - - - - - - - - - - - "
+echo
 
-# this is my test script :)
+# this is my first script :)
